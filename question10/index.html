@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Items</title>
+</head>
+<body>
+    <ul id="myList"></ul>
+    <button id="addBtn">Add Item</button>
+    <script>
+        const ul = document.getElementById('myList');
+        const btn = document.getElementById('addBtn');
+        let count = 1;
+        btn.addEventListener('click', function() {
+            const li = document.createElement('li');
+            li.textContent = 'Item ' + count++;
+            ul.appendChild(li);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <style>
+        .container {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 24px;
+            background: lightblue;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .person-info {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+        }
+        .sayhello-btn {
+            padding: 8px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            background: blue;
+            color: white;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .sayhello-btn:hover {
+            background: #0056b3;
+        }
+        @media (max-width: 500px) {
+            .container {
+                max-width: 95vw;
+                padding: 12px;
+            }
+            .person-info {
+                font-size: 1rem;
+            }
+            .sayhello-btn {
+                width: 100%;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="person-info" id="personInfo"></div>
+        <button class="sayhello-btn" id="helloBtn">Say Hello</button>
+    </div>
+    <script>
+        class Person{
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            sayhello(){
+                alert("hello");
+            }
+        }
+        const person1 = new Person('Soumyosish', 20);
+        document.getElementById('personInfo').textContent = `Name: ${person1.name}, Age: ${person1.age}`;
+        document.getElementById('helloBtn').addEventListener('click', function() {
+        person1.sayhello();
+        });
+    </script>
+</body>
+</html>

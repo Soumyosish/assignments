@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button is Clicked</title>
+</head>
+<body>
+    <div id="node">
+        <p>First paragraph</p>
+        <p id="second-para">Second paragraph</p>
+        <p>Third paragraph</p>
+    </div>
+    <script>
+        const secondPara = document.getElementById('second-para');
+        console.log('Parent Node of secondPara:', secondPara.parentNode);
+        const demoDiv = document.getElementById('node');
+        console.log('Child Nodes of node:', demoDiv.childNodes);
+        console.log('Next Sibling of secondPara:', secondPara.nextSibling);
+        console.log('Next Element Sibling of secondPara:', secondPara.nextElementSibling);
+    </script>
+</body>
+</html>

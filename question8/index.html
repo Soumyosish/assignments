@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button is Clicked</title>
+</head>
+<body>
+    <form>
+        I have created a form
+        <br/><br/>
+        <label for="name">Name:
+            <input type="text" id="name" placeholder="Enter your name" required>
+        </label>
+        <br/><br/>
+        <button type="button" id="button" onclick="updateTag()">Show Input</button>
+        <br/><br/>
+    </form>
+    <p id="output"></p>
+    <script>
+        function updateTag() {
+            const inputText = document.getElementById('name').value;
+            document.getElementById('output').textContent = inputText;
+        }
+    </script>
+</body>
+</html>
