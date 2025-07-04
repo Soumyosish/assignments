@@ -1,0 +1,1 @@
+This repository consists of the practice questions given by cipherschools during the full stack web development course to revise and brush up the concepts again for better understandability of the different tech stacks learned so far.
