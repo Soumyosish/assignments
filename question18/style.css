@@ -1,0 +1,76 @@
+body {
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: burlywood;
+    background-color: beige;
+    text-align: center;
+    margin: 24px 0 16px 0;
+    padding: 12px 0;
+}
+
+.card {
+    border: 1px solid lightsalmon;
+    padding: 16px;
+    box-shadow: 4px 4px 16px 2px rgba(0,0,0,0.2);
+    background: #fff8f0;
+    border-radius: 8px;
+    margin: 24px auto 20px auto;
+    max-width: 400px;
+}
+
+form {
+    margin: 24px auto 20px auto;
+    max-width: 400px;
+    padding: 16px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.08);
+}
+
+img {
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+}
+
+label, input, button {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.relative-box {
+    position: relative;
+    background: #ffe4b5;
+    padding: 20px;
+    margin: 32px auto 20px auto;
+    border-radius: 6px;
+    max-width: 400px;
+}
+
+.absolute-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #add8e6;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.95em;
+    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.1);
+}
+
+.fixed-box {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #90ee90;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.15);
+    z-index: 1000;
+} 

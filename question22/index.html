@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #4caf50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Div 1</div>
+        <div class="box">Div 2</div>
+        <div class="box">Div 3</div>
+    </div>
+    <p id="personDetails"></p>
+    <script>
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            sayHello() {
+                return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+            }
+        }
+        const person = new Person('Soumyosish', 20);
+        document.getElementById('personDetails').textContent = `Name: ${person.name}, Age: ${person.age}`;
+        console.log(person.sayHello());
+    </script>
+</body>
+</html>

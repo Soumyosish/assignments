@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change of Child Nodes</title>
+</head>
+<body>
+    <button id="addBtn">Add Item</button>
+    <button id="removeBtn">Remove Last Item</button>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <script>
+        const ul = document.getElementById('myList');
+        const addBtn = document.getElementById('addBtn');
+        const removeBtn = document.getElementById('removeBtn');
+        let count = ul.childNodes.length;
+        addBtn.onclick = function() {
+            const li = document.createElement('li');
+            li.textContent = 'Item ' + (ul.children.length + 1);
+            ul.appendChild(li);
+            highlightItems();
+        };
+        removeBtn.onclick = function() {
+            if (ul.lastElementChild) {
+                ul.removeChild(ul.lastElementChild);
+            }
+        };
+        function highlightItems() {
+            const items = ul.getElementsByTagName('li');
+            for (let i = 0; i < items.length; i++) {
+                items[i].style.backgroundColor = 'yellow';
+            }
+        }
+        highlightItems();
+        console.log('ul.parentNode:', ul.parentNode);
+        console.log('ul.childNodes:', ul.childNodes);
+        if (ul.firstChild) {
+            console.log('ul.firstChild.nextSibling:', ul.firstChild.nextSibling);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image and Media Queries</title>
+    <style>
+        body {
+            font-size: 18px;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #2196f3;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+        }
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.pinimg.com/originals/c5/ac/fd/c5acfddcb339d21e3458a845a9eeccb3.jpg" alt="Nature image" class="responsive-img">
+    <form aria-label="Contact form">
+        <input type="text" placeholder="Your name">
+        <button type="submit">Submit</button>
+    </form>
+    <div class="container">
+        <div class="box">Div 1</div>
+        <div class="box">Div 2</div>
+        <div class="box">Div 3</div>
+    </div>
+</body>
+</html>

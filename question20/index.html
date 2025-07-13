@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="enter your name">
+        <button type="button" onclick="changetext()">Submit</button>
+        <button type="button" onclick="clearf()">Clear</button>
+    </form>
+    <p id="message"></p>
+    <script>
+        function changetext(){
+            const input=document.getElementById('name').value;
+            document.getElementById('message').textContent=input;
+        }
+        function clearf(){
+            document.getElementById('name').value='';
+            document.getElementById('message').textContent='';
+        }
+    </script>
+</body>
+</html>
